@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>association-of-rajshahi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        input[type="text"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .success-msg {
+            display: none;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Association of Rajshahi</h2>
+    <form id="rajshahiForm">
+        <div class="form-group">
+            <label for="name">Name (নাম):</label>
+            <input type="text" id="name" name="name" required placeholder="আপনার পূর্ণ নাম লিখুন">
+        </div>
+
+        <div class="form-group">
+            <label for="dept">Department (বিভাগ):</label>
+            <select id="dept" name="dept" required>
+                <option value="">-- বিভাগ নির্বাচন করুন --</option>
+                <option value="Computer Science and Engineering (CSE)">Computer Science and Engineering (CSE)</option>
+                <option value="Industrial and Production Engineering (IPE)">Industrial and Production Engineering (IPE)</option>
+                <option value="Petroleum and Mining Engineering (PME)">Petroleum and Mining Engineering (PME)</option>
+                <option value="Chemical Engineering (ChE)">Chemical Engineering (ChE)</option>
+                <option value="Electrical and Electronic Engineering (EEE)">Electrical and Electronic Engineering (EEE)</option>
+                <option value="Biomedical Engineering (BME)">Biomedical Engineering (BME)</option>
+                <option value="Textile Engineering (TE)">Textile Engineering (TE)</option>
+                <option value="Microbiology">Microbiology</option>
+                <option value="Fisheries and Marine Bioscience (FMB)">Fisheries and Marine Bioscience (FMB)</option>
+                <option value="Genetic Engineering and Biotechnology (GEBT)">Genetic Engineering and Biotechnology (GEBT)</option>
+                <option value="Pharmacy">Pharmacy</option>
+                <option value="Biochemistry and Molecular Biology (BMB)">Biochemistry and Molecular Biology (BMB)</option>
+                <option value="Environmental Science and Technology (EST)">Environmental Science and Technology (EST)</option>
+                <option value="Nutrition and Food Technology (NFT)">Nutrition and Food Technology (NFT)</option>
+                <option value="Food Engineering (FE)">Food Engineering (FE)</option>
+                <option value="Climate and Disaster Management (CDM)">Climate and Disaster Management (CDM)</option>
+                <option value="Physical Education and Sports Science (PESS)">Physical Education and Sports Science (PESS)</option>
+                <option value="Physiotherapy and Rehabilitation (PR)">Physiotherapy and Rehabilitation (PR)</option>
+                <option value="Nursing and Health Science">Nursing and Health Science</option>
+                <option value="English">English</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Applied Statistics and Data Science">Applied Statistics and Data Science</option>
+                <option value="Accounting and Information Systems (AIS)">Accounting and Information Systems (AIS)</option>
+                <option value="Management">Management</option>
+                <option value="Finance and Banking">Finance and Banking</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="session">Session (সেশন):</label>
+            <select id="session" name="session" required>
+                <option value="">-- সেশন নির্বাচন করুন --</option>
+                <option value="2020-21">2020-21</option>
+                <option value="2021-22">2021-22</option>
+                <option value="2022-23">2022-23</option>
+                <option value="2023-24">2023-24</option>
+                <option value="2024-25">2024-25</option>
+                <option value="2025-26">2025-26</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number (মোবাইল নম্বর):</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{11}" placeholder="01XXXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+            <label for="upazila">Upazila (উপজেলা):</label>
+            <select id="upazila" name="upazila" required>
+                <option value="">-- রাজশাহী জেলার উপজেলা নির্বাচন করুন --</option>
+                <option value="Bagha Upazila">বাঘা উপজেলা (Bagha)</option>
+                <option value="Bagmara Upazila">বাগমারা উপজেলা (Bagmara)</option>
+                <option value="Charghat Upazila">চারঘাট উপজেলা (Charghat)</option>
+                <option value="Durgapur Upazila">দুর্গাপুর উপজেলা (Durgapur)</option>
+                <option value="Godagari Upazila">গোদাগাড়ী উপজেলা (Godagari)</option>
+                <option value="Mohanpur Upazila">মোহনপুর উপজেলা (Mohanpur)</option>
+                <option value="Paba Upazila">পবা উপজেলা (Paba)</option>
+                <option value="Puthia Upazila">পুঠিয়া উপজেলা (Puthia)</option>
+                <option value="Tanore Upazila">তানোর উপজেলা (Tanore)</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit (সাবমিট করুন)</button>
+    </form>
+    <div id="successMsg" class="success-msg">আপনার তথ্য সফলভাবে জমা হয়েছে! ধন্যবাদ।</div>
+</div>
+
+<script>
+    document.getElementById('rajshahiForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            dept: document.getElementById('dept').value,
+            session: document.getElementById('session').value,
+            mobile: document.getElementById('mobile').value,
+            upazila: document.getElementById('upazila').value
+        };
+
+        // এখানে আপনার পাওয়া Web App URL-টি বসান:
+        fetch('https://script.google.com/macros/s/AKfycbxhKR4s7rrdr9gnRbwRvTRHL4ua0lRFSCaZXfsAYCrWXjoTqf7nlWB4rvzqDR_QsZOl/exec', {
+            method: 'POST',
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('successMsg').style.display = 'block';
+            this.reset();
+        })
+        .catch(error => console.error('Error!', error));
+    });
+</script>
+
+</body>
+</html>
