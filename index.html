@@ -7,7 +7,12 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+            /* ব্যাকগ্রাউন্ড ইমেজ এবং ওভারলে যুক্ত করা হয়েছে */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -16,12 +21,14 @@
             min-height: 100vh;
         }
         .container {
-            background-color: #ffffff;
+            /* ফর্মের ব্যাকগ্রাউন্ড হালকা স্বচ্ছ (translucent) করা হয়েছে যেন পেছনের ছবিটা সুন্দর ফুটে ওঠে */
+            background-color: rgba(255, 255, 255, 0.92);
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             width: 100%;
             max-width: 600px;
+            backdrop-filter: blur(5px);
         }
         h2 {
             text-align: center;
@@ -46,6 +53,7 @@
             border-radius: 6px;
             font-size: 16px;
             box-sizing: border-box;
+            background-color: #fff;
         }
         input:focus, select:focus {
             border-color: #3498db;
@@ -170,14 +178,14 @@
         e.preventDefault();
         
         const formData = {
-            name: document.getElementById('Name').value,
-            dept: document.getElementById('Dept').value,
-            session: document.getElementById('Session').value,
-            mobile: document.getElementById('Mobile').value,
-            upazila: document.getElementById('Upazila').value
+            name: document.getElementById('name').value,
+            dept: document.getElementById('dept').value,
+            session: document.getElementById('session').value,
+            mobile: document.getElementById('mobile').value,
+            upazila: document.getElementById('upazila').value
         };
 
-        // এখানে আপনার পাওয়া Web App URL-টি বসান:
+        // আপনার Web App URL
         fetch('https://script.google.com/macros/s/AKfycbxhKR4s7rrdr9gnRbwRvTRHL4ua0lRFSCaZXfsAYCrWXjoTqf7nlWB4rvzqDR_QsZOl/exec', {
             method: 'POST',
             body: JSON.stringify(formData)
