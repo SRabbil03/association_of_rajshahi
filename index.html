@@ -147,6 +147,7 @@
             <label for="upazila">Upazila (উপজেলা):</label>
             <select id="upazila" name="upazila" required>
                 <option value="">-- রাজশাহী জেলার উপজেলা নির্বাচন করুন --</option>
+                <option value="Sadar Upazila"> সদর উপজেলা (Sadar)</option>
                 <option value="Bagha Upazila">বাঘা উপজেলা (Bagha)</option>
                 <option value="Bagmara Upazila">বাগমারা উপজেলা (Bagmara)</option>
                 <option value="Charghat Upazila">চারঘাট উপজেলা (Charghat)</option>
@@ -169,11 +170,11 @@
         e.preventDefault();
         
         const formData = {
-            name: document.getElementById('name').value,
-            dept: document.getElementById('dept').value,
-            session: document.getElementById('session').value,
-            mobile: document.getElementById('mobile').value,
-            upazila: document.getElementById('upazila').value
+            name: document.getElementById('Name').value,
+            dept: document.getElementById('Dept').value,
+            session: document.getElementById('Session').value,
+            mobile: document.getElementById('Mobile').value,
+            upazila: document.getElementById('Upazila').value
         };
 
         // এখানে আপনার পাওয়া Web App URL-টি বসান:
